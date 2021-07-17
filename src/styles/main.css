@@ -1,0 +1,674 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00adb5;
+}
+
+.skip-link {
+  position: absolute;
+  top: -80px;
+  padding: 14px;
+  left: 0;
+  width: 180px;
+  background-color: #00adb5;
+  color: #fff;
+  text-decoration: none;
+  z-index: 100;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Navbar */
+
+.header-container {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.header-logo {
+  width: 40%;
+  margin-left: 20%;
+}
+
+.header-logo p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00adb5;
+}
+
+#drawer {
+  width: 60%;
+}
+
+.nav-list {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin-right: 5%;
+  list-style: none;
+  position: relative;
+}
+
+.nav-item a {
+  min-width: 20px;
+  line-height: 44px;
+  padding: 5px 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  padding: 0 30px 0 30px;
+  font-weight: 500;
+  background: #fff;
+  color: #000;
+  border-radius:20px;
+  text-shadow:0 1px 1px black;
+  overflow: hidden;
+}
+
+
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  margin: 0 5%;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  margin-top: -5em;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.651),
+      rgba(3, 3, 3, 0.856)
+    ),
+    url("../public/images/heros/hero-image_4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-detail, .hero-favorite {
+  min-height: 50vh;
+}
+
+.sub-hero {
+  margin-top: -5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.651),
+      rgba(0, 0, 0, 0.856)
+    ),
+    url("../public/images/heros/hero-image_4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-inner {
+  color: #fff;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 1.6em;
+  margin-bottom: 5px;
+}
+
+.hero-inner .hero-title {
+  color: #00adb5;
+  font-weight: bolder;
+  font-size: 3.4em;
+  margin-bottom: 10px;
+}
+
+.hero-tagline {
+  font-size: 1.6em;
+  margin-bottom: 45px;
+}
+
+.hero-inner .hero-button {
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  transition: 0.5s;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid #00adb5;
+  background: none;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+  display: block;
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero-inner .hero-button:focus {
+  background: #00adb5;
+  color: #fff;
+  outline: 2px solid #00adb5;
+}
+
+.hero-inner .hero-button:hover {
+  background: #00adb5;
+  color: #fff;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+.center {
+  margin: 3rem 0 0;
+  text-align: center;
+}
+
+.main-inner {
+  padding: 2.5rem !important;
+  text-align: center;
+  display: flex;
+}
+
+.main-icon {
+  width: 100%;
+  padding: 0 2rem !important;
+  text-align: center;
+}
+
+.main-icon .material-icons {
+  vertical-align: middle !important;
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.main-icon span {
+  color: #00adb5;
+  font-size: 6rem;
+}
+
+.restaurant-block {
+
+  border-radius: 25px;
+  background-color: #00adb5;
+  color: white;
+  padding: 10px 40px 10px 15px;
+}
+
+.restaurant-label {
+  padding-top: 4rem;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 60px;
+  padding: 2.5rem !important;
+}
+
+.restaurant-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.img-item {
+  position: relative;
+}
+
+.restaurant-thumbnail {
+  width: 100%;
+  height: 250px;
+}
+
+.restaurant-content {
+  padding: 16px;
+}
+
+.restaurant-city {
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.restaurant-title {
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.restaurant-rating {
+  position: absolute;
+  left: 0;
+  background-color: #00adb5;
+  color: #fff;
+  padding: 5px 25px 5px 16px;
+  font-size: 16px;
+  border-bottom-right-radius: 20px;
+}
+
+.restaurant-rating span.material-icons {
+  position: relative;
+  top: 5px;
+  color: #fff !important;
+}
+
+.restaurant-city span.material-icons {
+  position: relative;
+  top: 5px;
+  color: #00adb5 !important;
+}
+
+.restaurant-description {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+div .restaurant-parent {
+  text-align: center;
+}
+
+.restaurant-button {
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  transition: 0.5s;
+  padding: 10px 20px;
+  position: relative;
+  top: 28px;
+  outline: 2px solid #00adb5;
+  background: #00adb5;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  width: 100%;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+}
+
+.restaurant-button:focus {
+  background: #e23e57;
+  color: #fff;
+  outline: 2px solid #e23e57;
+}
+
+.restaurant-button:hover {
+  background: #e23e57;
+  color: #fff;
+}
+
+.loader {
+  margin: 3% auto;
+  text-align: center;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #00adb5;
+  animation: spin 2s linear infinite;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 60px;
+}
+
+.restaurant-detail {
+  padding: 20px 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.detail-photo {
+  position: relative;
+}
+
+.detail-photo img {
+  width: 100%;
+}
+
+.detail-rate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 40px 10px 15px;
+  background-color: #00adb5;
+  color: #fff;
+  font-size: 16px;
+  border-bottom-right-radius: 25px;
+}
+
+.info-restaurant {
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+h1.detail-rest-name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.category {
+  display: flex;
+  margin: 5px 0 5px 0;
+}
+
+.category-item {
+  padding: 5px 10px;
+  background-color: #00adb5;
+  border-radius: 10px;
+  color: #fff;
+  margin: 0 10px 0 0;
+}
+
+.foods-menu, .drinks-menu {
+  text-align: left;
+  color: #000000;
+}
+
+.food-name, .drink-name, .title-review {
+  margin: 20px 0 10px 0;
+  font-weight: 700;
+  border-bottom: 1px solid #000000;
+}
+
+.food-name span.material-icons, .drink-name span.material-icons, .title-review span.material-icons {
+  position: relative;
+  top: 4px;
+  color: #00adb5;
+}
+
+.waktu-review span.material-icons {
+  position: relative;
+  top: 2px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin: 10px 0 20px 0;
+  text-align: center;
+}
+
+.menu-item {
+  padding: 5px 5px;
+  background-color: #e23e57;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.content-add-review {
+  margin-top: 50px;
+}
+
+.form-wrapper {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.title-add-review {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.title-add-review h1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background-color: #00adb5;
+  padding: 5px 40px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0;
+  font-size: 22px;
+}
+
+.title-add-review h1 span.material-icons {
+  position: relative;
+  top: 4px;
+  margin-right: 2px;
+}
+
+.form-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group .input {
+  width: 100%;
+  margin: 0;
+  padding: 12px 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  border: 2px solid #00adb5;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-group textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+.form-group .input:focus, .form-group textarea:focus {
+  outline: 0;
+}
+
+.form-group button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  background-color: #00adb5;
+  padding: 13px 55px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.form-group button:focus {
+  background: #00adb5;
+  color: #fff;
+  outline: 2px solid #00adb5;
+}
+
+.form-group button:hover {
+  background: #e23e57;
+  color: #fff;
+}
+
+.line-button {
+  position: relative;
+  background-color: #fff;
+  width: 98%;
+  height: 2px;
+  margin-top: 50px;
+}
+
+.detail-reviews {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.title-detail-review {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.title-detail-review h1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background-color: #00adb5;
+  padding: 5px 40px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0;
+  font-size: 22px;
+}
+
+.title-detail-review h1 span.material-icons {
+  position: relative;
+  top: 4px;
+  margin-right: 2px;
+}
+
+.list-review {
+
+  width: 100%;
+  margin: 0;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  border: 2px solid #00adb5;
+  font-family: "Roboto", sans-serif;
+}
+
+.list-review p {
+  margin: 0;
+}
+
+.list-review p.nama-review {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.list-review p.waktu-review {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.btn-like {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #00adb5;
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  width: 54px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.btn-like span.material-icons {
+  position: relative;
+  font-size: 28px;
+  top: 2px;
+}
+
+.btn-like:hover {
+  background: #00adb5;
+  color: #fff;
+}
+.btn-like:focus {
+  outline: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.icon {
+  text-align: center;
+}
+
+.error-icon span.material-icons, .info-icon span.material-icons {
+  margin-top: 3%;
+  text-align: center;
+  color: #e23e57;
+  font-size: 10rem;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #00adb5;
+  clear: both;
+  position: relative;
+  margin-top: 131px;
+}
